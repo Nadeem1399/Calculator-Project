@@ -1,0 +1,26 @@
+﻿<Window x:Class="CalculatorApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Calculator" Height="560" Width="689">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="operand1TextBox" Grid.Row="0" Margin="10"/>
+        <TextBox x:Name="operand2TextBox" Grid.Row="1" Margin="10"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10">
+            <Button Content="Add" Click="AddButton_Click" Margin="5"/>
+            <Button Content="Subtract" Click="SubtractButton_Click" Margin="5"/>
+            <Button Content="Multiply" Click="MultiplyButton_Click" Margin="5"/>
+            <Button Content="Divide" Click="DivideButton_Click" Margin="5"/>
+        </StackPanel>
+
+        <Label x:Name="resultLabel" Content="Result:" Grid.Row="3" Margin="10"/>
+    </Grid>
+</Window>
